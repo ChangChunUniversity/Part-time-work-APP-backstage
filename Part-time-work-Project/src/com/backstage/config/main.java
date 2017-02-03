@@ -9,7 +9,7 @@ public class main {
 
     //test
     private int test(){
-        return 2;
+        return 3;
     }
 }
 

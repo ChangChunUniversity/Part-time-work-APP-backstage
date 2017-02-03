@@ -8,6 +8,6 @@ import java.io.IOException;
 public class main {
     //test
     private String test(){
-        return "test";
+        return "test1";
     }
 }
