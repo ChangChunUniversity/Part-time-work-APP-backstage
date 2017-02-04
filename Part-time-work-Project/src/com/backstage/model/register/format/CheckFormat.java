@@ -5,11 +5,15 @@ package com.backstage.model.register.format;
  */
 public class CheckFormat{
     public static Boolean isCorrectNickName(String nickName){
-        if(com.backstage.model.userinfo.format.CheckFormat.isCorrectNickName(nickName)||CheckFormat.isSQL(nickName)){
+        if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectNickName(nickName)){
+            return false;
+        }
+        if(CheckFormat.isSQL(nickName)){
             return false;
         }
         return true;
     }
+
     private static Boolean isSQL(String content){
         String[] sqlCommands={"and","exec","insert","select","delete","update"
                 ,"count","*","%","chr","mid","master","truncate","char","declare",";","or","-","+"};

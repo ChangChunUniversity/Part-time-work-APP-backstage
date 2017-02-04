@@ -5,7 +5,7 @@ package com.backstage.model.userinfo.format;
  */
 public class CheckFormat {
     public static Boolean isCorrectNickName(String nickName){
-        if(nickName.length()>=24){
+        if(nickName.length()>24){
             return false;
         }
         return true;
