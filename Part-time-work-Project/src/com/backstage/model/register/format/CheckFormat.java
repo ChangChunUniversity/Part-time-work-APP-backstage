@@ -11,10 +11,10 @@ public class CheckFormat{
         return true;
     }
     private static Boolean isSQL(String content){
-        String[] sqlCommand={"and","exec","insert","select","delete","update"
+        String[] sqlCommands={"and","exec","insert","select","delete","update"
                 ,"count","*","%","chr","mid","master","truncate","char","declare",";","or","-","+"};
-        for (String command:sqlCommand) {
-            if(content.contains(command)){
+        for (String sqlCommand:sqlCommands) {
+            if(content.contains(sqlCommand)){
                 return false;
             }
         }
