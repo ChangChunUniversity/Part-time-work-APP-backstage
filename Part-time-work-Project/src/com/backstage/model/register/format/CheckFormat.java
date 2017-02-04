@@ -5,7 +5,7 @@ package com.backstage.model.register.format;
  */
 public class CheckFormat{
     public static Boolean isCorrectNickName(String nickName){
-        if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectNickName(nickName)){
+        if(com.backstage.model.userinfo.format.CheckFormat.isCorrectNickName(nickName)==false){
             return false;
         }
         if(CheckFormat.isSQL(nickName)){
