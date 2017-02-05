@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
  * Created by lauya on 2017/2/4.
  */
 public class CheckFormat {
-   public static boolean check_name( String name)//检查姓名是否合法
+    public static boolean isCorrectNickName( String name)//检查姓名是否合法
     {
         if(name.length()>24||name.length()<0)
         {
@@ -15,7 +15,7 @@ public class CheckFormat {
         else
             return true;
     }
-    public static boolean check_phone(String number)//检查电话是否合法
+    public static boolean isCorrectPhone(String number)//检查电话是否合法
     {
         boolean flag = false;
         try {
@@ -28,23 +28,22 @@ public class CheckFormat {
         }
         return flag;
     }
-    public static boolean check_password(String password)//检查密码是否合法
+    public static boolean isCorrectPassword(String password)//检查密码是否合法
     {
         if(password.length()>6&&password.length()<108)
         {
             return true;
-        }
-        else
+        } else
         {
             return false;
         }
     }
-    public static boolean check_sex(String sex)
+    public static boolean isCorrectSex(String sex)
     {
         return true;
     }
 
-    public static boolean check_email(String email)//检测邮箱的地址是否合法
+    public static boolean isCorrectEmail(String email)//检测邮箱的地址是否合法
     {
         boolean flag = false;
         try {
@@ -58,23 +57,23 @@ public class CheckFormat {
         return flag;
     }
 
-    public static boolean check_school(String schoolName)
+    public static boolean isCorrectSchool(String schoolName)
     {
         return true;
     }
-    public static boolean check_colleage(String colleageName)
+    public static boolean isCorrectolleage(String colleageName)
     {
         return true;
     }
-    public static boolean check_marjor(String marjorName)
+    public static boolean isCorrectMarjor(String marjorName)
     {
         return true;
     }
-    public static boolean check_NO(String NOname)
+    public static boolean isCorrectSchoolNum(String NOname)
     {
         return true ;
     }
-    public static boolean check_ID_card(String idCard)
+    public static boolean isCorrectCitzenID(String idCard)
     {
         String REGEX_ID_CARD = "(^\\d{18}$)|(^\\d{15}$)";
        return  Pattern.matches(REGEX_ID_CARD, idCard);
