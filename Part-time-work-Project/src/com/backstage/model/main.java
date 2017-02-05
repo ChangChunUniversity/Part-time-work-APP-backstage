@@ -12,9 +12,9 @@ public class main {
     public static void main(String[] args)
     {
         CheckFormat test = new CheckFormat();
-        String number="36048119970545678";
+        String number="17743155265";
 // System.out.printf(1);
-        System.out.println(test.check_ID_card(number));
+        System.out.println(test.check_phone(number));
 
     }
 

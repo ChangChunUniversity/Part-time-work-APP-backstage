@@ -17,16 +17,8 @@ public class CheckFormat {
     }
     public static boolean check_phone(String number)//检查电话是否合法
     {
-        boolean flag = false;
-        try {
-            Pattern p = Pattern
-                    .compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
-            Matcher m = p.matcher(number);
-            flag = m.matches();
-        } catch (Exception e) {
-            flag = false;
-        }
-        return flag;
+        String REGEX_MOBILE = "^[1][3,4,5,7,8][0-9]{9}$";
+        return Pattern.matches(REGEX_MOBILE,number);
     }
     public static boolean check_password(String password)//检查密码是否合法
     {
