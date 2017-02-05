@@ -30,15 +30,13 @@ public class CheckFormat {
     }
     public static boolean isCorrectPassword(String password)//检查密码是否合法
     {
-        if(password.length()>6&&password.length()<108)
-        {
+        if(password.length()>=6&&password.length()<=108){
             return true;
-        } else
-        {
+        }else{
             return false;
         }
     }
-    public static boolean isCorrectSex(String sex)
+    public static boolean isCorrectSex(int sex)
     {
         return true;
     }
