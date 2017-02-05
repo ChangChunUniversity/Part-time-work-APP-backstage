@@ -36,7 +36,7 @@ public class CheckFormat {
             return false;
         }
     }
-    public static boolean isCorrectSex(int sex)
+    public static boolean isCorrectSex(int sex)//检查性别是否合法
     {
         return true;
     }
@@ -55,19 +55,19 @@ public class CheckFormat {
         return flag;
     }
 
-    public static boolean isCorrectSchool(String schoolName)
+    public static boolean isCorrectSchool(int school)
     {
         return true;
     }
-    public static boolean isCorrectolleage(String colleageName)
+    public static boolean isCorrectCollege(int college)
     {
         return true;
     }
-    public static boolean isCorrectMarjor(String marjorName)
+    public static boolean isCorrectMarjor(int marjor)
     {
         return true;
     }
-    public static boolean isCorrectSchoolNum(String NOname)
+    public static boolean isCorrectSchoolNum(int schoolNum)
     {
         return true ;
     }
