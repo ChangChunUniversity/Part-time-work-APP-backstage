@@ -18,8 +18,14 @@ public class CheckFormat {
     }
     public static boolean isCorrectPhone(String number)//检查电话是否合法
     {
-        String REGEX_MOBILE = "^[1][3,4,5,7,8][0-9]{9}$";
-        return Pattern.matches(REGEX_MOBILE,number);
+        boolean isMatch;
+        try{
+            String REGEX_MOBILE = "^[1][3,4,5,7,8][0-9]{9}$";
+            isMatch=Pattern.matches(REGEX_MOBILE,number);
+        }catch (Exception e){
+            isMatch=false;
+        }
+        return isMatch;
     }
     public static boolean isCorrectPassword(String password)//检查密码是否合法
     {
@@ -36,7 +42,7 @@ public class CheckFormat {
 
     public static boolean isCorrectEmail(String email)//检测邮箱的地址是否合法
     {
-        boolean flag = false;
+        boolean flag;
         try {
             String check = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
             Pattern regex = Pattern.compile(check);

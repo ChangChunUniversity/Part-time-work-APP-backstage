@@ -5,7 +5,7 @@ package com.backstage.model.register.format;
  */
 public class CheckFormat{
     //检查姓名是否合法
-    public static Boolean isCorrectNickName(String nickName){
+    public static boolean isCorrectNickName(String nickName){
         if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectNickName(nickName)){
             return false;
         }
@@ -16,7 +16,7 @@ public class CheckFormat{
     }
 
     //检查密码(String)
-    public static Boolean isCorrectPassword(String password){
+    public static boolean isCorrectPassword(String password){
         if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectPassword(password)){
             return false;
         }
@@ -27,7 +27,7 @@ public class CheckFormat{
     }
 
     //检查电话(String)
-    public static Boolean isCorrectPhone(String phone){
+    public static boolean isCorrectPhone(String phone){
         if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectPhone(phone)){
             return false;
         }
@@ -38,7 +38,7 @@ public class CheckFormat{
     }
 
     //检查邮件(String)
-    public static Boolean isCorrectEmail(String email){
+    public static boolean isCorrectEmail(String email){
         if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectEmail(email)){
             return false;
         }
@@ -49,7 +49,7 @@ public class CheckFormat{
     }
 
     //检查性别(int)
-    public static Boolean isCorrectSex(int sex){
+    public static boolean isCorrectSex(int sex){
         if(!com.backstage.model.userinfo.format.CheckFormat.isCorrectSex(sex)){
             return false;
         }
@@ -57,14 +57,14 @@ public class CheckFormat{
     }
 
     //检查是否包含SQL代码(防止SQL注入)
-    private static Boolean isSQL(String content){
+    private static boolean isSQL(String content){
         String[] sqlCommands={"and","exec","insert","select","delete","update"
-                ,"count","*","%","chr","mid","master","truncate","char","declare",";","or","-","+"};
+                ,"count","*","%","chr","mid","master","truncate","char","declare",";","-","+"};
         for (String sqlCommand:sqlCommands) {
-            if(content.contains(sqlCommand)){
-                return false;
+            if(content.contains(" "+sqlCommand+" ")){
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }
