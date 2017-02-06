@@ -2,7 +2,10 @@ package com.backstage.controller;
 
 
 import java.io.IOException;
-import com.google.gson.*;
+import java.io.PrintWriter;
+
+import com.google.gson.Gson;
+
 import com.backstage.model.register.format.BaseJsonStrute;
 
 /**
@@ -10,12 +13,14 @@ import com.backstage.model.register.format.BaseJsonStrute;
  */
 public class register extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        String str="{\"name\":\"kidou\",\"age\":24,\"email_address\":\"ikidou@example.com\"}";
-        Gson json=new Gson();
-        BaseJsonStrute aaa=json.fromJson(str,BaseJsonStrute.class);
+
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
+        String str="{\"nickname\":\"testname\",\"password\":123456pwd,\"sex\":1,\"phone\":\"13634587645\",\"email\":\"test@test.com\"}";
+        Gson json=new Gson();
+        BaseJsonStrute aaa=json.fromJson(str,BaseJsonStrute.class);
+        PrintWriter out=response.getWriter();
+        out.write(aaa.getEmail());
     }
 }
