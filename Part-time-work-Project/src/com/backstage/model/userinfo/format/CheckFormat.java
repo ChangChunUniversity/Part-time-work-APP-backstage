@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
  * Created by lauya on 2017/2/4.
  */
 public class CheckFormat {
+    //检查姓名是否合法
     public static boolean isCorrectNickName( String name)//检查姓名是否合法
     {
         if(name.length()>24||name.length()<0)

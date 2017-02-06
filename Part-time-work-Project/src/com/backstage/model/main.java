@@ -14,7 +14,7 @@ public class main {
         CheckFormat test = new CheckFormat();
         String number="17743155265";
 // System.out.printf(1);
-        System.out.println(test.check_phone(number));
+        System.out.println(test.isCorrectPhone(number));
 
     }
 
