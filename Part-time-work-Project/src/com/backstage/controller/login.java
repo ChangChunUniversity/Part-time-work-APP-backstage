@@ -19,9 +19,4 @@ public class login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-
-    //登录
-    private static String doLogin(String username,String password){
-        return "";
-    }
 }
