@@ -7,8 +7,13 @@ package com.backstage.config.exception;
  * 未确定
  */
 public class ErrCodes {
-    public class Informational{
-        public static final int Continue=100;
+    public class INF{
+        public static final int INVALID_INF=100;
+        public static final int INVALID_NICKNAME=101;
+        public static final int INVALID_PASSWORD=102;
+        public static final int INVALID_PHONE=103;
+        public static final int INVALID_SEX=104;
+        public static final int INVALID_EMAIL=105;
     }
 
     public class Success{

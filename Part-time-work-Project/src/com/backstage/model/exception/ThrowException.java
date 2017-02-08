@@ -14,7 +14,7 @@ public class ThrowException {
             String ErrCode=e.getMessage().replace("ErrCode:","");
             return Integer.parseInt(ErrCode);
         }else {
-            throw new IllegalArgumentException("Unreachable ErrCode:"+e.getMessage());
+            throw new IllegalArgumentException("ErrCode:10086");
         }
 
     }

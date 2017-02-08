@@ -20,7 +20,7 @@ public class register extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        String str = "{\"nickname\":\"testname\",\"password\":123456pwd,\"sex\":1,\"phone\":\"13634187645\",\"email\":\"test@qq.test.com\"}";
+        String str = "{\"nickname\":\"testname\",\"password\":123456pwd,\"sex\":1,\"phone\":\"13334187645\",\"email\":\"test@qq.test.com\"}";
         Gson inputJson = new Gson();
         BaseInputJson recvData = inputJson.fromJson(str, BaseInputJson.class);
 
@@ -40,6 +40,7 @@ public class register extends javax.servlet.http.HttpServlet {
             id = DataBase.writeBaseInput(nickName, password, sex, phone, email);
         } catch (IllegalArgumentException e) {
             out.write(Error.ReturnError(e));
+            return;
         }
 
         //检验输出值合法性
