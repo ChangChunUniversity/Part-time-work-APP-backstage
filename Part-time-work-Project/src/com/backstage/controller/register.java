@@ -2,9 +2,11 @@ package com.backstage.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import com.backstage.view.register.BaseInputJsonStrute;
+import com.backstage.view.register.BaseOutputJsonStrute;
 import com.google.gson.Gson;
 
-import com.backstage.model.register.format.*;
 import com.backstage.model.register.database.DataBase;
 import com.backstage.model.gson.Error;
 

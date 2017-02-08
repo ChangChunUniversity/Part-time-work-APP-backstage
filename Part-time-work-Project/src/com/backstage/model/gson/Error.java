@@ -1,5 +1,6 @@
 package com.backstage.model.gson;
 
+import com.backstage.view.gson.ErrorOutputJsonStrute;
 import com.google.gson.Gson;
 
 import com.backstage.model.exception.ThrowException;

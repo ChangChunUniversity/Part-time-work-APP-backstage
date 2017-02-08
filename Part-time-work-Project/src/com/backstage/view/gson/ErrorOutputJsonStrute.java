@@ -1,4 +1,4 @@
-package com.backstage.model.gson;
+package com.backstage.view.gson;
 
 /**
  * Created by lauya on 2017/2/7.

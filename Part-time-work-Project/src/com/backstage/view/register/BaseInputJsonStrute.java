@@ -1,4 +1,4 @@
-package com.backstage.model.register.format;
+package com.backstage.view.register;
 
 import com.backstage.model.gson.Value;
 import com.backstage.model.register.format.CheckFormat;

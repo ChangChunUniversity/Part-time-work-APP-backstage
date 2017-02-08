@@ -1,4 +1,4 @@
-package com.backstage.model.register.format;
+package com.backstage.view.register;
 
 /**
  * Created by lauya on 2017/2/7.
