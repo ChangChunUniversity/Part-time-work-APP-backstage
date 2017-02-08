@@ -7,7 +7,7 @@ import com.backstage.model.exception.ThrowException;
  * Created by jangitlau on 2017/2/6.
  */
 //注册时收到JSON结构
-public class BaseInputJsonStrute {
+public class BaseInputJson {
     //结构定义
     public String nickname = "";
     public String password = "";

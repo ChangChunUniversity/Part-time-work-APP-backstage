@@ -16,6 +16,7 @@ public class login extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String str="{\"username\":\"xxxxxx\",\"password\":\"xxxxxx\",\"timestamp\":1486551703,\"DeviceID\":“352087074301038”}";
 
     }
 }

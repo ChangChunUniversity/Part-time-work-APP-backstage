@@ -3,8 +3,8 @@ package com.backstage.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import com.backstage.view.register.BaseInputJsonStrute;
-import com.backstage.view.register.BaseOutputJsonStrute;
+import com.backstage.view.register.BaseInputJson;
+import com.backstage.view.register.BaseOutputJson;
 import com.google.gson.Gson;
 
 import com.backstage.model.register.database.DataBase;
@@ -22,7 +22,7 @@ public class register extends javax.servlet.http.HttpServlet {
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         String str = "{\"nickname\":\"testname\",\"password\":123456pwd,\"sex\":1,\"phone\":\"13634187645\",\"email\":\"test@qq.test.com\"}";
         Gson inputJson = new Gson();
-        BaseInputJsonStrute recvData = inputJson.fromJson(str, BaseInputJsonStrute.class);
+        BaseInputJson recvData = inputJson.fromJson(str, BaseInputJson.class);
 
         String nickName;
         String email;
@@ -49,7 +49,7 @@ public class register extends javax.servlet.http.HttpServlet {
         //#定义错误码解释
 
         Gson outputJson = new Gson();
-        BaseOutputJsonStrute sendData=new BaseOutputJsonStrute();
+        BaseOutputJson sendData=new BaseOutputJson();
         sendData.status=0;
         sendData.token="";
         out.write(outputJson.toJson(sendData));
