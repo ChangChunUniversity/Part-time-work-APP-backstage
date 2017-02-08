@@ -16,6 +16,5 @@ public class ThrowException {
         }else {
             throw new IllegalArgumentException("ErrCode:10086");
         }
-
     }
 }
