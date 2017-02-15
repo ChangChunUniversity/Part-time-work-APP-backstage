@@ -17,6 +17,7 @@
       <root url="jar://$PROJECT_DIR$/Part-time-work-Project/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar!/" />
       <root url="jar://$PROJECT_DIR$/Part-time-work-Project/lib/jsr250-api-1.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/Part-time-work-Project/lib/antlr-2.7.7.jar!/" />
+      <root url="jar://F:/迅雷下载/mysql-connector-java-5.1.35-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
